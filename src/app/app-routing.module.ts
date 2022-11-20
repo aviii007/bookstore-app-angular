@@ -1,15 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from './Component/dashboard/dashboard.component';
+import { CartComponent } from './components/cart/cart.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 const routes: Routes = [
-
-  {
-    path: '', redirectTo: 'books',
-    pathMatch: 'full'
-  },
-  {path: 'books', component: DashboardComponent},
-  // {path: '**', component: PagenotfoundComponent},
+  {path:'',redirectTo:'/dashboard',pathMatch:'full'},
+  {path:"dashboard",component:DashboardComponent},
+  {path:"cart",component:CartComponent}
 ];
 
 @NgModule({

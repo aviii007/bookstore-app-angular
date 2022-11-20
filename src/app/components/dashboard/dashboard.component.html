@@ -1,0 +1,56 @@
+<div class="dash-headerdiv">
+    <div class="header-div">
+        <span class="book-title">Books</span>
+       
+    </div>
+
+    <div class="sort">
+        <select class="sort-selector">
+            <option *ngFor = "let sort of sorts" [value] = "sort.value">
+                {{sort.selectValue}}
+            </option>
+        </select>
+    </div>
+</div>
+
+<div class="grid-head-div">
+    <mat-grid-list cols="4" rowHeight="1:1" colWidth="1:1" gutterSize="2.3%" >
+       <mat-grid-tile>
+        <mat-grid-tile-header class="grid-head">
+            <img src="../../assets/bookimg2.jpg" alt="k"/>
+        </mat-grid-tile-header>
+        <mat-grid-tile-footer class="grid-foot">
+            <h2>The practice of Creativity</h2>
+            <span>by Steve Krug</span>
+            <h3>Rs.1400</h3>
+            <div class="button">
+                <!-- <button class="add" mat-button>Add to bag</button> -->
+                <button class="add" (click)="onAddBook()" mat-button>Add to bag</button>
+                <button class="wish" mat-button>Wish list</button>
+            </div>
+          </mat-grid-tile-footer>
+       </mat-grid-tile>
+      
+
+      <!-- next box -->
+      
+        <mat-grid-tile>
+         <mat-grid-tile-header class="grid-head">
+             <img src="../../assets/bookimg2.jpg" alt="k"/>
+         </mat-grid-tile-header>
+         <mat-grid-tile-footer class="grid-foot">
+            <h2>The practice of Creativity</h2>
+            <span>by Steve Krug</span>
+            <h3>Rs.1500</h3>
+            <div class="button">
+                <!-- <button class="add" mat-button>Add to bag</button> -->
+                <button class="add" (click)="onAddBook()" mat-button>Add to bag</button>
+                <button class="wish" mat-button>Wish list</button>
+            </div>
+          </mat-grid-tile-footer>
+        </mat-grid-tile>
+
+       </mat-grid-list> 
+</div>
+<router-outlet></router-outlet>
+<app-footer></app-footer>

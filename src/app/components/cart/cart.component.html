@@ -1,0 +1,118 @@
+<!-- <app-header></app-header> -->
+<div class="cart-div">
+    <mat-card class="book-detail">
+        <div class="cart-title">
+            <span class="cart-title">My Cart</span>
+        </div>
+        <div class="cart-detail">          
+            <img src="../../assets/bookimg2.jpg" alt="k"/>
+            <div class="order-detail">
+                <h2>Don't Make yet think</h2>
+                <span>by Steve Krug</span>
+                <p>Rs.1500</p>
+            </div>
+        </div>
+        <div class="book-quantity-div">
+            <button mat-float-button class="minus" color="primary">-</button> 
+            <input class="quantity-number" type="text" value="1" />  
+            <button mat-float-button class="plus" color="primary">+</button>
+            <button mat-float-button class="remove" color="primary">Remove</button>
+        </div>
+        <div class="cart-order"><button mat-float-button class="place-order" (click)="addOrder()" color="primary">Place order</button></div>
+    </mat-card>
+
+
+    <mat-card class="customerorder-detail" *ngIf="bookFlag== true" >
+        <!-- <div class="customer-detail">
+            <span class="customer-title">Customer Details</span> -->
+        
+
+        <!-- input for name -->
+        <div class="firstrow-div1">
+            <form class="customerdetails-form">
+                <h2>Customer Details</h2>
+            <div class="firstrow-div2">
+                <mat-form-field class="example-full-width1" appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input matInput placeholder="Name" />
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width2" appearance="outline">
+                    <mat-label>Phone number</mat-label>
+                    <input matInput placeholder="phoneNumber" />
+                </mat-form-field>
+            </div>
+
+
+            <div class="firstrow-div2">
+                <mat-form-field class="example-full-width1" appearance="outline">
+                    <mat-label>Pincode</mat-label>
+                    <input matInput placeholder="Pincode" />
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width2" appearance="outline">
+                    <mat-label>Locality</mat-label>
+                    <input matInput placeholder="Locality" />
+                </mat-form-field>
+            </div>
+
+            <div class="firstrowarea-div4">
+                <mat-form-field class="form-text-area" appearance="outline">
+                    <textarea matInput placeholder="Address"></textarea>
+                </mat-form-field>
+            </div>
+
+            <div class="firstrow-div2">
+                <mat-form-field class="example-full-width1" appearance="outline">
+                    <mat-label>City/Town</mat-label>
+                  <input matInput placeholder="City/Town" />
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width2" appearance="outline">
+                    <mat-label>Landmark</mat-label>
+                    <input matInput placeholder="Landmark" />
+                </mat-form-field>
+            </div>
+
+            <div class="firstrow-div2">
+                <h3>Type</h3>
+                <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button class="type-radio-group" value="1">Home</mat-radio-button>
+                    <mat-radio-button class="type-radio-group" value="2">Work</mat-radio-button>
+                    <mat-radio-button class="type-radio-group" value="3">Other</mat-radio-button>
+                </mat-radio-group>
+            </div>
+            <div class="cart-order"><button mat-float-button class="place-order" (click)="addDetails()" color="primary">Continue</button></div>
+            </form>
+  
+        </div>     
+        <!-- </div> -->
+    </mat-card>
+
+    
+
+    <!-- tryiong summary -->
+    <mat-card class="ordersummary-details" *ngIf="customerStatus== true" >
+        <div class="summary-div">
+            <h2>Order Summary</h2>
+            <div class="summary-details-div">
+                <img src="../../assets/bookimg2.jpg" alt="k"/>
+                <div class="summary-detail">
+                    <h2>Don't Make me think</h2>
+                    <span>by Steve Krug</span>
+                    <p>Rs.1500</p>
+                </div>
+            </div>
+            <!-- <div class="summary-tab">
+                <button class="exit"  mat-button>Checkout</button>
+            </div> -->
+            <div class="cart-order"><button mat-float-button class="place-order" color="primary">Checkout</button></div>
+        </div>
+    </mat-card>   
+</div>
+<router-outlet></router-outlet>
+<app-footer></app-footer>
+
+
+
+
